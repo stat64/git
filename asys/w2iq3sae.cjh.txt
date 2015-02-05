@@ -1,0 +1,138 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	app/views/main.html
+	tmp/bytecode/DEV/_app_views_Application_index.html
+	tmp/bytecode/DEV/_app_views_Secure_login.html
+	tmp/bytecode/DEV/_app_views_main.html
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 7 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   app/controllers/Application.java
+#	new file:   app/controllers/Usuarios.java
+#	modified:   app/models/Usuario.java
+#	new file:   app/views/Usuarios/index.html
+#	new file:   app/views/Usuarios/list.html
+#	modified:   app/views/main.html
+#	modified:   conf/routes
+#	modified:   eclipse/classes/ApplicationTest.class
+#	modified:   eclipse/classes/BasicTest.class
+#	modified:   eclipse/classes/controllers/Application.class
+#	modified:   eclipse/classes/controllers/Check.class
+#	modified:   eclipse/classes/controllers/GlobalController.class
+#	modified:   eclipse/classes/controllers/MyDeadboltHandler.class
+#	modified:   eclipse/classes/controllers/RegistroCentral.class
+#	modified:   eclipse/classes/controllers/Secure$Security.class
+#	modified:   eclipse/classes/controllers/Secure.class
+#	modified:   eclipse/classes/controllers/Security.class
+#	modified:   eclipse/classes/controllers/deadbolt/AbstractDeadboltHandler.class
+#	modified:   eclipse/classes/controllers/deadbolt/Deadbolt.class
+#	modified:   eclipse/classes/controllers/deadbolt/DeadboltHandler.class
+#	modified:   eclipse/classes/controllers/deadbolt/ExternalRestrictions.class
+#	modified:   eclipse/classes/controllers/deadbolt/ExternalizedRestrictionsAccessor.class
+#	modified:   eclipse/classes/controllers/deadbolt/Restrict.class
+#	modified:   eclipse/classes/controllers/deadbolt/RestrictedResource.class
+#	modified:   eclipse/classes/controllers/deadbolt/RestrictedResourcesHandler.class
+#	modified:   eclipse/classes/controllers/deadbolt/Restrictions.class
+#	modified:   eclipse/classes/controllers/deadbolt/reports/DeadboltReporter.class
+#	modified:   eclipse/classes/controllers/modules/search/Administration.class
+#	modified:   eclipse/classes/generarCodigo.class
+#	modified:   eclipse/classes/models/MyRole.class
+#	modified:   eclipse/classes/models/Usuario.class
+#	modified:   eclipse/classes/models/UsuarioAlumno.class
+#	modified:   eclipse/classes/models/UsuarioProfesor.class
+#	modified:   eclipse/classes/models/deadbolt/AccessResult.class
+#	modified:   eclipse/classes/models/deadbolt/ExternalizedRestriction.class
+#	modified:   eclipse/classes/models/deadbolt/ExternalizedRestrictions.class
+#	modified:   eclipse/classes/models/deadbolt/NullRoleHolder.class
+#	modified:   eclipse/classes/models/deadbolt/Role.class
+#	modified:   eclipse/classes/models/deadbolt/RoleHolder.class
+#	modified:   eclipse/classes/models/deadbolt/reports/ControllerReport.class
+#	modified:   eclipse/classes/models/deadbolt/reports/MethodReport.class
+#	modified:   eclipse/classes/models/deadbolt/reports/ProjectReport.class
+#	modified:   eclipse/classes/modules/search/SearchReindexJob.class
+#	new file:   public/javascripts/jquery-1.3.2.min.js
+#	new file:   public/javascripts/jquery-ui-1.7.2.custom.min.js
+#	new file:   public/javascripts/sessvars.js
+#	new file:   public/stylesheets/bootstrap2/css/bootstrap-responsive.css
+#	new file:   public/stylesheets/bootstrap2/css/bootstrap-responsive.min.css
+#	new file:   public/stylesheets/bootstrap2/css/bootstrap.css
+#	new file:   public/stylesheets/bootstrap2/css/bootstrap.min.css
+#	new file:   public/stylesheets/bootstrap2/img/glyphicons-halflings-white.png
+#	new file:   public/stylesheets/bootstrap2/img/glyphicons-halflings.png
+#	new file:   public/stylesheets/bootstrap2/js/bootstrap.js
+#	new file:   public/stylesheets/bootstrap2/js/bootstrap.min.js
+#	modified:   test-result/application.log
+#	modified:   tmp/bytecode/DEV/ApplicationTest
+#	modified:   tmp/bytecode/DEV/BasicTest
+#	modified:   tmp/bytecode/DEV/DocViewerPlugin
+#	modified:   tmp/bytecode/DEV/_app_views_errors_404.html
+#	modified:   tmp/bytecode/DEV/_app_views_errors_500.html
+#	modified:   tmp/bytecode/DEV/_play__framework_templates_tags_500.html
+#	modified:   tmp/bytecode/DEV/controllers.Application
+#	modified:   tmp/bytecode/DEV/controllers.Check
+#	modified:   tmp/bytecode/DEV/controllers.GlobalController
+#	modified:   tmp/bytecode/DEV/controllers.MyDeadboltHandler
+#	modified:   tmp/bytecode/DEV/controllers.PlayDocumentation
+#	modified:   tmp/bytecode/DEV/controllers.RegistroCentral
+#	modified:   tmp/bytecode/DEV/controllers.Security
+#	modified:   tmp/bytecode/DEV/controllers.TestRunner
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.AbstractDeadboltHandler
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.Deadbolt
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.DeadboltHandler
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.ExternalRestrictions
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.ExternalizedRestrictionsAccessor
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.Restrict
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.RestrictedResource
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.RestrictedResourcesHandler
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.Restrictions
+#	modified:   tmp/bytecode/DEV/controllers.deadbolt.reports.DeadboltReporter
+#	modified:   tmp/bytecode/DEV/controllers.modules.search.Administration
+#	modified:   tmp/bytecode/DEV/generarCodigo
+#	modified:   tmp/bytecode/DEV/helpers.CheatSheetHelper
+#	modified:   tmp/bytecode/DEV/helpers.CheatSheetHelper$1
+#	modified:   tmp/bytecode/DEV/helpers.CheatSheetHelper$2
+#	modified:   tmp/bytecode/DEV/helpers.CheatSheetHelper$3
+#	modified:   tmp/bytecode/DEV/models.MyRole
+#	modified:   tmp/bytecode/DEV/models.Usuario
+#	modified:   tmp/bytecode/DEV/models.UsuarioAlumno
+#	modified:   tmp/bytecode/DEV/models.UsuarioProfesor
+#	modified:   tmp/bytecode/DEV/models.deadbolt.AccessResult
+#	modified:   tmp/bytecode/DEV/models.deadbolt.ExternalizedRestriction
+#	modified:   tmp/bytecode/DEV/models.deadbolt.ExternalizedRestrictions
+#	modified:   tmp/bytecode/DEV/models.deadbolt.NullRoleHolder
+#	modified:   tmp/bytecode/DEV/models.deadbolt.Role
+#	modified:   tmp/bytecode/DEV/models.deadbolt.RoleHolder
+#	modified:   tmp/bytecode/DEV/models.deadbolt.reports.ControllerReport
+#	modified:   tmp/bytecode/DEV/models.deadbolt.reports.MethodReport
+#	modified:   tmp/bytecode/DEV/models.deadbolt.reports.ProjectReport
+#	modified:   tmp/bytecode/DEV/modules.search.SearchReindexJob
+#	modified:   tmp/classes/DocViewerPlugin.class
+#	modified:   tmp/classes/controllers/Application.class
+#	modified:   tmp/classes/controllers/Check.class
+#	modified:   tmp/classes/controllers/PlayDocumentation.class
+#	modified:   tmp/classes/generarCodigo.class
+#	modified:   tmp/classes/helpers/CheatSheetHelper$1.class
+#	modified:   tmp/classes/helpers/CheatSheetHelper$2.class
+#	modified:   tmp/classes/helpers/CheatSheetHelper$3.class
+#	modified:   tmp/classes/helpers/CheatSheetHelper.class
+#	modified:   tmp/classes/models/Usuario.class
+#
+# Untracked files:
+#	lebn4fmx.tfd.txt
+#
+

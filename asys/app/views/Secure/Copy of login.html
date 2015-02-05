@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Aerial by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/public/template/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/public/template/js/skel.min.js"></script>
+		<script src="/public/template/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="/public/template/css/skel.css" />
+			<link rel="stylesheet" href="/public/template/css/style.css" />
+			<link rel="stylesheet" href="/public/template/css/style-wide.css" />
+			<link rel="stylesheet" href="/public/template/css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="/public/template/css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/public/template/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Adam Jensen</h1>
+						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+						<nav>
+							<ul>
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+								<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							</ul>
+						</nav>
+						
+						
+#{if flash.get("mensaje")}
+<div style="margin-top:0.5em; font-size:1.5em;">${flash.get("mensaje")}</div>
+#{/if}
+
+<table>
+<tr>
+<td style="padding-right:1em;">
+<div class="header-nivel-2">Conectar a mi cuenta APP.SECURE</div>
+
+
+
+#{form @Secure.authenticate()} 
+#{if flash.error}
+<p class="error">&{flash.error}</p>
+#{/if} #{if flash.success}
+<p class="success">&{flash.success}</p>
+#{/if}
+
+<div>
+
+<div style="margin:4px 0 4px;">Por favor completa los datos y presiona enviar.</div>
+<div style="margin:0.7em 0 4px;">Email o nombre de usuario</div>
+#{field "username"}
+<div style="margin:4px 0 4px;"><input type="text" name="${field.name}" id="username" value="${field.value}" size="16" /></div>
+#{/field}
+<div style="margin:4px 0 4px;">Contraseña(alexTest)</div>
+<div style="margin:4px 0 4px;"><input type="password" name="password" id="password" value="" size="16"/></div>
+<div style="margin:4px 0 4px;"><input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true" ' : ''} /> Recordarme en este computador</div>
+<div style="margin:1em 0 4px;"><input value="Enviar" name="Enviar" type="submit"></div>
+
+
+</div>				
+
+#{/form}
+
+</td></tr>
+</table>
+						
+						
+					</header>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">.</span>
+					</footer>
+				
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+<script>
+$(document).ready(function() { 
+	$("input[type='text']:first", document.forms[0]).focus();
+});
+</script>				
