@@ -8,15 +8,17 @@
             </tr>
         </thead>
         <tbody>
+            
             #{list docen, as:'docentes'}
                 <tr>
-                    <td>${docentes.nombre}</td>                    
+                    <td onclick="detectar(this);" name=${docentes.nombre}>${docentes.nombre}</td>                    
                     <td>${docentes.cedula}</td>              
                     
                 </tr>
             #{/list}
         </tbody>
     </table>
+    
     <p>
         <a id="nextPage" href="${page+1}" class="btn">More results</a>
     </p>

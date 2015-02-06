@@ -82,6 +82,14 @@
 			        search()
 			    }   	
 		    });
+			        
+			 <!--Programacion del on click-->
+			 function detectar(valor) {
+				var names=valor.getAttribute("name");
+				<!--Detectado el atributo-->
+				alert(names);
+				
+				} 
 		</script>
 
 
@@ -157,15 +165,7 @@
 				</li>
 			</ul>
 		</section>
-		<table>
-			#{list docen, as:'docentes'}
-			<tr>
-				<td>${docentes.nombre}</td>
-				<td>${docentes.cedula}</td>
 
-			</tr>
-			#{/list}
-		</table>
 
 		<div id="copyright" class="container">
 			<ul class="menu">

@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -12,6 +13,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.MapKey;
+import javax.persistence.OneToMany;
 import javax.persistence.UniqueConstraint;
 
 import models.deadbolt.Role;
@@ -45,7 +48,11 @@ public abstract class Usuario extends Model implements RoleHolder,
 	@Column(unique = true, nullable = false)
 	@Basic(optional = false)
 	public String nombre;
-
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@MapKey(name = "code")
+	public Map<Long, Horario> horario;
+	
 	@Required
 	@Column(nullable = false)
 	@Basic(optional = false)
@@ -169,6 +176,13 @@ public abstract class Usuario extends Model implements RoleHolder,
 
 	public boolean esEstudiante() {
 		return true;
+	}
+	
+	public void crearHorario(long Nro, String Hora, String Lunes,
+			String Martes, String Miercoles, String Jueves, String Viernes,
+			String Sabado) {
+		Horario horario = new Horario(Nro, Hora, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado);
+		this.horario.put(Nro, horario);
 	}
 
 }
