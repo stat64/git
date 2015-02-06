@@ -50,7 +50,7 @@ public abstract class Usuario extends Model implements RoleHolder,
 	public String nombre;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@MapKey(name = "code")
+	@MapKey(name = "Nro")
 	public Map<Long, Horario> horario;
 	
 	@Required
