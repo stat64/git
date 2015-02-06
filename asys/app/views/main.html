@@ -85,16 +85,19 @@
 			        
 			 <!--Programacion del on click-->
 			 function detectar(valor) {
-				var names=valor.getAttribute("name");
-				<!--Detectado el atributo-->
-				alert(names);
+				var id=valor.getAttribute("name");
+				<!--Detectado el atributo-->				
 				
+				alert(id);
+				location.href = "/login";
 				} 
+			 
+			 
 		</script>
 
 
 </head>
-<body class="homepage">
+<body class="homepage" >
 
 	<!-- Header -->
 	<div id="header-wrapper">

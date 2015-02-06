@@ -16,9 +16,8 @@ import models.*;
 public class Application extends Controller {
 
 	public static void index() {
-		List<Usuario> docen = null;
-		docen = Usuario.all().fetch();
-		render(docen);
+		
+		render();
 	}
 
 	public static void list(String search, Integer size, Integer page) {
