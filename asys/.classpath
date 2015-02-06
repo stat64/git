@@ -82,5 +82,9 @@
 	<classpathentry kind="lib" path="C:/play/modules/search-2.0/lib/lucene-analyzers-3.0.3.jar"/>
 	<classpathentry kind="lib" path="C:/play/modules/search-2.0/lib/lucene-core-3.0.3.jar"/>
 	<classpathentry kind="lib" path="C:/play/modules/search-2.0/lib/search.jar"/>
+	<classpathentry kind="lib" path="C:/git/gitasys/asys/modules/search-2.0/lib/lucene-analyzers-3.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/git/gitasys/asys/modules/search-2.0/lib/lucene-core-3.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/git/gitasys/asys/modules/search-2.0/lib/search.jar"/>
+	<classpathentry kind="lib" path="C:/git/gitasys/asys/modules/deadbolt-1.4.3/lib/play-deadbolt.jar"/>
 	<classpathentry kind="output" path="eclipse/classes"/>
 </classpath>
