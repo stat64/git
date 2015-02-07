@@ -41,15 +41,5 @@
 			<type>2</type>
 			<location>C:/play/modules/secure/conf</location>
 		</link>
-		<link>
-			<name>public/deadbolt-1.4.3</name>
-			<type>2</type>
-			<location>C:/workspace/asys/modules/deadbolt-1.4.3/public</location>
-		</link>
-		<link>
-			<name>public/secure</name>
-			<type>2</type>
-			<location>C:/play/modules/secure/public</location>
-		</link>
 	</linkedResources>
 </projectDescription>

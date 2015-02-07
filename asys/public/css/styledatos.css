@@ -1,0 +1,27 @@
+.sidebar {
+	float: left;
+	width: 550px;
+	height: 160px;
+	margin-right: 21px;
+	padding-top:-10px;
+	-webkit-border-radius: 13px 13px 13px 13px;
+	-moz-border-radius: 13px 13px 13px 13px;
+	-o-border-radius: 13px 13px 13px 13px;
+}
+
+.sidebar_ing {
+	float: right;
+	width: auto;
+	height:auto;
+	
+	-webkit-border-radius: 13px 13px 13px 13px;
+	-moz-border-radius: 13px 13px 13px 13px;
+	-o-border-radius: 13px 13px 13px 13px;
+}
+hero_hora
+	{
+		position: relative;
+		color: #fff;
+		text-align: center;
+		z-index: 1;
+	}

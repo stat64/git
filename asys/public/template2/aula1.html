@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<title>Asys-</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!--[if lte IE 8]><script src="/public/template2/css/ie/html5shiv.js"></script><![endif]-->
+<script src="/public/template2/js/jquery.min.js"></script>
+<script src="/public/template2/js/jquery.dropotron.min.js"></script>
+<script src="/public/template2/js/skel.min.js"></script>
+<script src="/public/template2/js/skel-layers.min.js"></script>
+<script src="/public/template2/js/init.js"></script>
+<script type="text/javascript" charset="${_response_encoding}">
+$(document).ready(function(){
+    
+    var bloque = $('#bloque').val(); 
+    var piso=$('piso').val();
+    var txtnum=$('piso').val();
+
+}
+</script>
+<noscript>
+	<link rel="stylesheet" href="/public/template2/css/skel.css" />
+	<link rel="stylesheet" href="/public/template2/css/style.css" />
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="/public/template2/css/ie/v8.css" /><![endif]-->
+
+
+<!-- FUNCION VALIDAR AULA -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btnEnviar").click(function() {
+			if ($('#txtnumero').val() == '') {
+				alert('El campo esta vacio');
+			} else {
+				var numero = $("#txtnumero").val();
+				alert(numero);
+			}
+
+			$("#bloque").select()!=null) {
+				var selected = $(this).find("option:selected").val();
+			});
+		});
+	});
+</script>
+<!-- FIN DE LA FUNCION -->
+</head>
+<body class="right-sidebar">
+
+	<!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo-->
+			<h1 id="logo">
+				<a href="/public/template2/indexx.html">HOME</a>
+			</h1>
+
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="/public/template2/profesor.html">PROFESORES</a></li>
+					<li><a href="/public/template2/materia.html">MATERIA</a></li>
+					<li class="break"><a href="/public/template2/aula.html">AULAS</a></li>
+					<li><a href="">HORARIO</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+	<!-- Hero -->
+	<section id="hero" class="container">
+		<h2>Formulario Aula</h2>
+		<form>
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Numero</th>
+						<th>Etiqueta</th>
+						<th>Campo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Numero:</td>
+
+						<td><input TYPE=text id="txtnumero" name="" value=""
+							placeholder="Ejemplo: 07" /></td>
+
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Edificio:</td>
+						<td><select id="bloque" class="">
+								<option>-- -- --</option>
+								<option value="">Bloque A</option>
+								<option value="">Bloque B</option>
+								<option value="">Bloque Antiguo</option>
+								<option value="">Bloque de Ingles</option>
+						</select></td>
+
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Piso:</td>
+						<td><select id="piso">
+								<option>-- -- --</option>
+								<option value="">Planta Baja</option>
+								<option value="">Piso 1</option>
+								<option value="">Piso 2</option>
+								<option value="">Piso 3</option>
+								<option value="">Piso 4</option>
+								<option value="">Piso 5</option>
+						</select></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="submit" id="btnEnviar" value="Enviar" name=""
+				onclick="validar();" />
+		</form>
+
+	</section>
+
+	<!-- Main -->
+
+
+	<div class="wrapper">
+
+
+		<div id="copyright" class="container">
+			<ul class="menu">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">ASYS</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+</html>

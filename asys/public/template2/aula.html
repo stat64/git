@@ -1,0 +1,25 @@
+hola mundo
+
+#{form id:'itemForm', action:@Application.ingresarAula(), method:'POST', enctype:'multipart/form-data' }			
+<table>
+	<tr>
+		<td>Elija el producto que desea comprar:</td>
+		#{field 'id'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese la cantidad:</td>
+		#{field 'numero'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese la cantidad:</td>
+		#{field 'edificio'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese la cantidad:</td>		
+		#{field 'piso'}															  			
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  			
+		<td><input size="5" type="submit" value="Comprar"></td>		
+	</tr>
+</table>
+#{/form}

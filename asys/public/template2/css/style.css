@@ -487,7 +487,7 @@
 			text-decoration: none;
 			border: solid 1px #c2c7cc;
 			border-radius: 0.35em;
-			padding: 0.8em 2em 0.8em 2em;
+			padding: 0.3em 2em 0.3em 2em;
 			cursor: pointer;
 			outline: 0;
 			-moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -784,14 +784,14 @@
 	#hero
 	{
 		position: relative;
-		color: #fff;
+		color: #797979;
 		text-align: center;
 		z-index: 1;
 	}
 	
 		#hero h2
 		{
-			color: #fff;
+			color: #424E5A;
 			font-size: 3em;
 		}
 		
