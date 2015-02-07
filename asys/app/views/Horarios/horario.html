@@ -1,4 +1,392 @@
-#{extends 'horario.html' /}
-#{set title:'Home' /}
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<title>Asys-</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!--[if lte IE 8]><script src="/public/template2/css/ie/html5shiv.js"></script><![endif]-->
+<script src="/public/template2/js/jquery.min.js"></script>
+<script src="/public/template2/js/jquery.dropotron.min.js"></script>
+<script src="/public/template2/js/skel.min.js"></script>
+<script src="/public/template2/js/skel-layers.min.js"></script>
+<script src="/public/template2/js/init.js"></script>
+
+<link rel="stylesheet" href="/public/css/styles.css" type="text/css"
+	media="screen" />
+
+<link rel="stylesheet" href="/public/css/movingbox.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="/public/css/styledatos.css" type="text/css"
+	media="screen" />
+<script type="text/javascript">
+    $(function () {
+        $("#mostrar").click(function (event) {
+            event.preventDefault();
+            $("#caja").slideToggle();
+        });
+    });
+</script>
+    <script language="javascript1.2" type="text/javascript">
+        var IE = document.all ? true : false;
+        if (!IE) {
+            document.captureEvents(Event.MOUSEMOVE);
+        }
+        document.onmousemove = getMouseXY;
+        var tempX = 0;
+        var tempY = 0;
+        //esta funcion no necesitas entender solo asigna la posicion del raton a tempX y tempY
+        function getMouseXY(e) {
+            if (IE) { //para IE
+                tempX = event.clientX + document.body.scrollLeft;
+                tempY = event.clientY + document.body.scrollTop;
+            }
+            else { //para netscape
+                tempX = e.pageX;
+                tempY = e.pageY;
+            }
+            if (tempX < 0) {
+                tempX = 0;
+            }
+            if (tempY < 0) {
+                tempY = 0;
+            }
+            return true;
+        }
+        function VentanaFlotante(mensaje, x, y) {
+            //creo el objeto div
+            var div_fl = document.createElement('DIV');
+            //le asigno que su posicion sera abosoluta
+            div_fl.style.position = 'absolute';
+            //le asigno el ide a la ventana
+            div_fl.id = 'Miventana';
+            //digo en que posicion left y top se creara a partir de la posicion del raton tempx tempy
+            div_fl.style.left = tempX + 'px';
+            div_fl.style.top = tempY + 'px';
+            //asigno el ancho del div pasado por parametro
+            div_fl.style.width = x + 'px';
+            //asigno el alto del div pasado por parametro
+            div_fl.style.height = y + 'px';
+            //digo con css que el borde sera de grosor 1px solido y de color negro
+            div_fl.style.border = "1px solid #000000";
+            //asigno el color de fondo
+            div_fl.style.backgroundColor = "#cccccc";
+            //el objeto añado a la estrutura principal el document.body
+            document.body.appendChild(div_fl);
+            //el mensaje pasado por parametro muestro dentro del div
+            div_fl.innerHTML = mensaje;
+        }
+        function quitarDiv() {
+            //creo el objeto del div
+            var mv = document.getElementById('Miventana');
+            //elimino el objeto
+            document.body.removeChild(mv);
+        }
+</script>
+
+<style type="text/css">
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+
+a {
+	color: #993300;
+	text-decoration: none;
+}
+
+#caja {
+	display: none;
+	padding: 5px;
+	width: 1300px;
+	height: 170px;
+	margin: 0 auto;
+	border: 2px solid #FADDA9;
+	background-color: white;
+}
+
+#mostrar {
+	display: block;
+	width: 1300px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 2px solid #D0E8F4;
+	background-color: #ECF8FD;
+	border: 2px solid #D0E8F4;
+}
+</style>
+<!--ADD ARCHIVE JQUERY -->
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!--ADD FUNTION THE CLOCK -->
+<script type="text/javascript" src="js/funcion.js"></script>
+<script src="js/jquery-1.3.1.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script type='text/javascript'
+	src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='js/jquery.color-RGBa-patch.js'></script>
+<script type='text/javascript' src='js/example.js'></script>
 
 
+<noscript>
+	<link rel="stylesheet" href="/public/template2/css/skel.css" />
+	<link rel="stylesheet" href="/public/template2/css/style.css" />
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="/public/template2/css/ie/v8.css" /><![endif]-->
+</head>
+<body class="right-sidebar">
+
+	<!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo -->
+			<h1 id="logo">
+				<a href="index.html">HOME</a>
+			</h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="">TEXTO1</a>
+						<ul>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Magna phasellus</a></li>
+							<li><a href="#">Etiam dolore nisl</a></li>
+							<li><a href="">Phasellus consequat</a>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Phasellus consequat</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam dolore nisl</a></li>
+								</ul></li>
+							<li><a href="#">Veroeros feugiat</a></li>
+						</ul></li>
+					<li><a href="/public/template2/left-sidebar.html">TEXTO2</a></li>
+					<li class="break"><a
+						href="/public/template2/right-sidebar.html">TEXTO3</a></li>
+					<li><a href="/public/template2/no-sidebar.html">TEXTO4</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+
+	<div class="wrapper">
+		<a id="mostrar">DATOS DEL DOCENTE</a>
+		<div id="caja">
+			<section id="dates">
+				<!-- dates -->
+				<div class="sidebar">
+					<h3>Datos Generales:</h3>
+					<ul>
+						<li>Mg Alex Cevallos</li>
+						<li>Latacunga</li>
+						<li>0502344512</li>
+						<li>CIYA</li>
+					</ul>
+				</div>
+
+				<div class="sidebar">
+					<h3>Ciclo Academico:</h3>
+					<ul>
+						<li>Octubre 2014 - Febrero 2015</li>
+
+					</ul>
+				</div>
+
+				<div class="sidebar_ing">
+					<img alt="picture" src="/public/images/leoardo.jpg">
+				</div>
+
+			</section>
+			<!-- end of dates -->
+
+		</div>
+
+		<!-- Main -->
+		<section id="main">
+			<!-- #main content area -->
+			<table>
+				<tr>
+					<td>Nro</td>
+					<td>Hora</td>
+					<td>Lunes</td>
+					<td>Martes</td>
+					<td>Miercoles</td>
+					<td>Jueves</td>
+					<td>Viernes</td>
+					<td>Sabado</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>07:00 - 08:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">TOPICOS ESPECIALES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES DE SISTEMAS OPERATIVOS</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>08:00 - 09:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">TOPICOS ESPECIALES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES DE SISTEMAS OPERATIVOS</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">ELABORACION Y CALIFICACION DE INSTRUMENTOS DE EVALUACION DE APRENDIZAJES</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>09:00 - 10:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">TOPICOS ESPECIALES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES DE SISTEMAS OPERATIVOS</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">ELABORACION Y CALIFICACION DE INSTRUMENTOS DE EVALUACION DE APRENDIZAJES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:7    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO WEB</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES WEB</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>10:00 - 11:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">ADMINISTRACION DE BD ORACLE</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUEB:     PISO:1', 100, 40)">ELABORACION Y CALIFICACION DE INSTRUMENTOS DE EVALUACION DE APRENDIZAJES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">PLANIFICACION ACADEMICA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:7    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO WEB</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES WEB</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>11:00 - 12:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">ADMINISTRACION DE BD ORACLE</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUEB:     PISO:1', 100, 40)">ELABORACION Y CALIFICACION DE INSTRUMENTOS DE EVALUACION DE APRENDIZAJES</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO DE SOFTWARE</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:7    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO WEB</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">APLICACIONES WEB</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>12:00 - 13:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:8    BLOQUE:B     PISO:1', 100, 40)">ADMINISTRACION DE BD ORACLE</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">TUTORIA ESTUDIANTIL PPROFESOR TUTOR</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO DE SOFTWARE</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">TUTORIA ESTUDIANTIL PPROFESOR TUTOR</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">PLANIFICACION ACADEMICA</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>13:00 - 14:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>14:00 - 15:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:25    BLOQUE:B     PISO:3', 100, 40)">PLANIFICACION ACADEMICA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">TUTORIAS DE TESIS</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO DE SOFTWARE</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>15:00 - 16:00</td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:25    BLOQUE:B     PISO:3', 100, 40)">PLANIFICACION ACADEMICA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">TUTORIAS DE TESIS</a></td>
+					<td>D<a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DESARROLLO DE SOFTWARE</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>16:00 - 17:00</td>
+					<td></td>
+					<td></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">TUTORIAS DE TESIS</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td>D<a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>17:00 - 18:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td><a onmouseout="javascript: quitarDiv();" onmouseover="javascript: VentanaFlotante('  AULA:0    BLOQUE:B     PISO:1', 100, 40)">DISEÑO DE PROYECTOS DE CARRERA</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>18:00 - 19:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>19:00 - 20:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>20:00 - 21:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>21:00 - 22:00</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</section>
+		<!-- end of #content -->
+		<div id="copyright" class="container">
+			<ul class="menu">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">ASYS</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
