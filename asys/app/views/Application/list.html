@@ -1,5 +1,7 @@
 #{if docen}
-	
+	#{form id:'itemForm',action:@Application.ingresarItem(), method:'GET',enctype:'multipart/form-data'}
+				
+				
     <table class="table table-bordered table-striped table-hover table-condensed">
         <thead>
             <tr>
@@ -12,17 +14,22 @@
             
             #{list docen, as:'docentes'}
                 <tr>
-                    <td onclick="detectar(this);" name=${docentes.id}>${docentes.nombre}</td>                    
-                    <td>${docentes.cedula}</td>              
+                     <td onclick="detectar(this);" name=${docentes.id}>${docentes.nombre}</td>          
+                     <td>${docentes.cedula}</td>              
                     
                 </tr>
             #{/list}
         </tbody>
     </table>
-	    
+    #{field 'cedula'}
+	  <input type="text" hidden="" id="sele" name="${field.name}"style="visibility: hidden;">
+	  #{/field}		
+	  <h1 id='tex'hidden="true"></h1>
+	  
     <p>
         <a id="nextPage" href="${page+1}" class="btn">More results</a>
     </p>
+    #{/form}
 #{/if}
 
 #{else}

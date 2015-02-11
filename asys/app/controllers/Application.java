@@ -16,10 +16,10 @@ import models.*;
 public class Application extends Controller {
 
 	public static void index() {
-		
 		render();
 	}
-
+	
+	
 	public static void list(String search, Integer size, Integer page) {
 		List<Usuario> docen = null;
 		page = page != null ? page : 1;
@@ -34,13 +34,16 @@ public class Application extends Controller {
 		render(docen, search, size, page);
 		System.out.println("Si se llama a la funcion");
 	}
-
-	public void horario(long Nro, String Hora, String Lunes, String Martes,
+	
+	public void Crearhorario(long Nro, String Hora, String Lunes, String Martes,
 			String Miercoles, String Jueves, String Viernes, String Sabado) {
 		UsuarioProfesor usuarioProfesor = new UsuarioProfesor();
 		usuarioProfesor.crearHorario(Nro, Hora, Lunes, Martes, Miercoles,
 				Jueves, Viernes, Sabado);
 		usuarioProfesor.save();
 	}
-
+	public static void ingresarItem(String cedula) {
+		String val= cedula;
+		render(val);
+	}
 }

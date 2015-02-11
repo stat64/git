@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 <head>
 <title>ASYS</title>
@@ -80,24 +79,27 @@
 			    if(sessvars.search != undefined) {
 			        $('#content').css('visibility', 'hidden')
 			        search()
-			    }   	
-		    });
+			    }
+			    $("td").click(function() {
+			     	var id=$("#tex").html();
+			     	var datos = $("#sele").val(id);
+					$("#itemForm").submit();
+					
+				});
+			 });
 			        
 			 <!--Programacion del on click-->
 			 function detectar(valor) {
 				var id=valor.getAttribute("name");
-				<!--Detectado el atributo-->				
-				
-				alert(id);
-				location.href = "/horario";
+				<!--Detectado el atributo-->
+				document.getElementById('tex').innerHTML=id;				
 				} 
 			 
 			 
 		</script>
 
-
 </head>
-<body class="homepage" >
+<body class="homepage">
 
 	<!-- Header -->
 	<div id="header-wrapper">

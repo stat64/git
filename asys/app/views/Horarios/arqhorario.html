@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<title>Asys-</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!--[if lte IE 8]><script src="/public/template2/css/ie/html5shiv.js"></script><![endif]-->
+<script src="/public/template2/js/jquery.min.js"></script>
+<script src="/public/template2/js/jquery.dropotron.min.js"></script>
+<script src="/public/template2/js/skel.min.js"></script>
+<script src="/public/template2/js/skel-layers.min.js"></script>
+<script src="/public/template2/js/init.js"></script>
+
+
+</head>
+<body class="right-sidebar">
+
+	<!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo -->
+			<h1 id="logo">
+				<a href="index.html">HOME</a>
+			</h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="">TEXTO1</a>
+						<ul>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Magna phasellus</a></li>
+							<li><a href="#">Etiam dolore nisl</a></li>
+							<li><a href="">Phasellus consequat</a>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Phasellus consequat</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam dolore nisl</a></li>
+								</ul></li>
+							<li><a href="#">Veroeros feugiat</a></li>
+						</ul></li>
+					<li><a href="/public/template2/left-sidebar.html">TEXTO2</a></li>
+					<li class="break"><a
+						href="/public/template2/right-sidebar.html">TEXTO3</a></li>
+					<li><a href="/public/template2/no-sidebar.html">TEXTO4</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+
+		<!-- Main -->
+		<section id="main">
+			<!-- #main content area -->
+			<table>
+				<tr>
+					<td>Nro</td>
+					<td>Hora</td>
+					<td>Lunes</td>
+					<td>Martes</td>
+					<td>Miercoles</td>
+					<td>Jueves</td>
+					<td>Viernes</td>
+					<td>Sabado</td>
+				</tr>
+				
+			#{list items:usuario.horarios.values(), as:'horarios'}
+			
+			<tr>
+			<td>${horarios.Hora}</td>
+			<td>${horarios.Lunes}</td>
+			<td>${horarios.Martes}</td>
+			<td>${horarios.Miercoles}</td>
+			<td>${horarios.Jueves}</td>
+			<td>${horarios.Viernes}</td>
+			<td>${horarios.Sabado}</td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+
+	
+	
+</body>
+</html>

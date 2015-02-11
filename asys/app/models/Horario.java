@@ -12,8 +12,7 @@ import play.db.jpa.Model;
 @Entity
 public class Horario extends Model {
 
-	int Nro;
-
+	long Nro;
 	String Hora;
 	String Lunes;
 	String Martes;
@@ -24,14 +23,14 @@ public class Horario extends Model {
 
 	public Horario(long Nro, String Hora, String Lunes, String Martes,
 			String Miercoles, String Jueves, String Viernes, String Sabado) {
-		Nro = this.Nro;
-		Hora = this.Hora;
-		Lunes = this.Lunes;
-		Martes = this.Martes;
-		Miercoles = this.Miercoles;
-		Jueves = this.Jueves;
-		Viernes = this.Viernes;
-		Sabado = this.Sabado;
+		this.Nro= Nro;
+		this.Hora = Hora;
+		this.Lunes = Lunes;
+		this.Martes = Martes;
+		this.Miercoles = Miercoles;
+		this.Jueves = Jueves;
+		this.Viernes =Viernes;
+		this.Sabado = Sabado;
 	}
 
 }

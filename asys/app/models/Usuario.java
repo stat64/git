@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,7 +52,7 @@ public abstract class Usuario extends Model implements RoleHolder,
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@MapKey(name = "Nro")
-	public Map<Long, Horario> horario;
+	public Map<Long, Horario> horarios;
 	
 	@Required
 	@Column(nullable = false)
@@ -92,7 +93,9 @@ public abstract class Usuario extends Model implements RoleHolder,
 			return find("byUserNameAndPassword", trimedUser, password).first();
 		}
 	}
-	
+	public Usuario() {
+		this.horarios = new HashMap<Long, Horario>();
+	}
 	@Override
 	public List<? extends Role> getRoles() {
 		// return Arrays.asList(new MyRole("foo"), new MyRole("conectado"),
@@ -182,7 +185,7 @@ public abstract class Usuario extends Model implements RoleHolder,
 			String Martes, String Miercoles, String Jueves, String Viernes,
 			String Sabado) {
 		Horario horario = new Horario(Nro, Hora, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado);
-		this.horario.put(Nro, horario);
+		this.horarios.put(Nro, horario);
 	}
 
 }
