@@ -1,0 +1,38 @@
+hola mundo
+<table>
+
+	#{list items:profesor.materias.values(), as:'materia'}
+	<tr>
+		<td>${materias.code}</td>
+		<td>${materias.nombre}</td>
+		<td>${materias.carrera}</td>
+		<td>${materias.ciclo}</td>
+	</tr>
+	#{/list}
+</table>
+#{form id:'itemForm', action:@Application.ingresaProfesor(),
+method:'GET', enctype:'multipart/form-data' }
+<table>
+	<tr>
+		<td>Ingrese los datos del docente:</td> #{field 'code'}
+		<td><input id="${field.id}" name="${field.name}" size="5"
+			type="text"></td> #{/field}
+		<td>Ingrese la cedula:</td> #{field 'cedula'}
+		<td><input id="${field.id}" name="${field.name}" size="5"
+			type="text"></td> #{/field}
+		<td>Ingrese la nombre:</td> #{field 'nombre'}
+		<td><input id="${field.id}" name="${field.name}" size="5"
+			type="text"></td> #{/field}
+		<td>Ingrese la apellido:</td> #{field 'apellido'}
+		<td><input id="${field.id}" name="${field.name}" size="5"
+			type="text"></td> #{/field}
+		<td>selecione la materia</td>
+		<td><select> #{list
+				items:profesor.materias.values(),as:'materia'}
+				<option value="${aula.code}">${materia.materia}</option> #{/list}
+		</select></td>
+
+		<td><input size="6" type="submit" value="Comprar"></td>
+	</tr>
+</table>
+#{/form}

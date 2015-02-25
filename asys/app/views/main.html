@@ -17,10 +17,7 @@
 <script src="@{'/public/javascripts/sessvars.js'}"
 	type="text/javascript" charset="${_response_encoding}"></script>
 
-<!-- hola Edison-->
-<!-- test Edison-->
-<!-- cambio 3 Edison-->
-<!-- cambio 4 Leo-->
+
 <noscript>
 	<link rel="stylesheet" href="/public/template2/css/skel.css" />
 	<link rel="stylesheet" href="/public/template2/css/style.css" />
@@ -83,7 +80,26 @@
 			    $("td").click(function() {
 			     	var id=$("#tex").html();
 			     	var datos = $("#sele").val(id);
-					$("#itemForm").submit();
+			     	var sms=0;
+			     	#{list usuarios, as:'usr'}
+					if(id=="${usr.id}"){
+						#{list horarios, as:'horario'}
+						if("${usr.nombre}"=="${horario.usuario}"){
+							$("#itemForm").submit();	
+							sms=0;				
+						}
+						else
+							{
+							sms++;
+							}
+					#{/list}
+						
+					}
+						
+					#{/list}	
+					if(sms!=0){
+						alert("El Usuario no tiene un horario designado");
+					}
 					
 				});
 			 });
@@ -91,6 +107,11 @@
 			 <!--Programacion del on click-->
 			 function detectar(valor) {
 				var id=valor.getAttribute("name");
+				
+				
+					
+				
+				
 				<!--Detectado el atributo-->
 				document.getElementById('tex').innerHTML=id;				
 				} 

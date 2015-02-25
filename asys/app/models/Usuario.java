@@ -38,6 +38,25 @@ import play.modules.search.Search;
 public abstract class Usuario extends Model implements RoleHolder,
 		Comparable<Usuario> {
 
+	@OneToMany(cascade = CascadeType.ALL)
+	@MapKey(name = "code")
+	public Map<Long, Horario> horarios;
+
+	public Usuario() {
+		
+	}
+	
+	public Horario findHorario(int code) {
+		return null;
+	}
+
+	public void addHorario(long code, String Hora, String Lunes, String Martes,
+			String Miercoles, String Jueves, String Viernes, String Sabado) {
+		Horario horario = new Horario(code, Hora, Lunes, Martes, Miercoles,
+				Jueves, Viernes, Sabado);
+		this.horarios.put(code, horario);
+	}
+
 	@Column(name = "es_inactivo")
 	public Boolean esInactivo;
 
@@ -49,11 +68,7 @@ public abstract class Usuario extends Model implements RoleHolder,
 	@Column(unique = true, nullable = false)
 	@Basic(optional = false)
 	public String nombre;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	@MapKey(name = "Nro")
-	public Map<Long, Horario> horarios;
-	
+
 	@Required
 	@Column(nullable = false)
 	@Basic(optional = false)
@@ -76,12 +91,14 @@ public abstract class Usuario extends Model implements RoleHolder,
 	@Column(name = "user_name", nullable = false)
 	@Required
 	public String userName;
-	
+
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "usuario_myrole",  joinColumns = @JoinColumn(name = "usuarios_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id"), uniqueConstraints = @UniqueConstraint(name = "UniqueConstraintUsuarioMyRole", columnNames = {
+	@JoinTable(name = "usuario_myrole", joinColumns = @JoinColumn(name = "usuarios_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id"), uniqueConstraints = @UniqueConstraint(name = "UniqueConstraintUsuarioMyRole", columnNames = {
 			"usuarios_id", "roles_id" }))
 	public List<MyRole> roles;
-
+	public Usuario(Boolean esInactivo,String nombre,String pass,String email,String cedula,String userName) {
+		
+	}
 	public static Usuario connect(String userName, String password) {
 
 		String trimedUser = userName.toLowerCase().trim();
@@ -93,9 +110,9 @@ public abstract class Usuario extends Model implements RoleHolder,
 			return find("byUserNameAndPassword", trimedUser, password).first();
 		}
 	}
-	public Usuario() {
-		this.horarios = new HashMap<Long, Horario>();
-	}
+
+	
+
 	@Override
 	public List<? extends Role> getRoles() {
 		// return Arrays.asList(new MyRole("foo"), new MyRole("conectado"),
@@ -175,17 +192,9 @@ public abstract class Usuario extends Model implements RoleHolder,
 		return result;
 
 	}
-	
 
 	public boolean esEstudiante() {
 		return true;
-	}
-	
-	public void crearHorario(long Nro, String Hora, String Lunes,
-			String Martes, String Miercoles, String Jueves, String Viernes,
-			String Sabado) {
-		Horario horario = new Horario(Nro, Hora, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado);
-		this.horarios.put(Nro, horario);
 	}
 
 }

@@ -17,6 +17,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>crud</name>
+			<type>2</type>
+			<location>C:/play/modules/crud/app</location>
+		</link>
+		<link>
 			<name>deadbolt-1.4.3</name>
 			<type>2</type>
 			<location>C:/workspace/asys/modules/deadbolt-1.4.3/app</location>
@@ -30,16 +35,6 @@
 			<name>secure</name>
 			<type>2</type>
 			<location>C:/play/modules/secure/app</location>
-		</link>
-		<link>
-			<name>conf/deadbolt-1.4.3</name>
-			<type>2</type>
-			<location>C:/workspace/asys/modules/deadbolt-1.4.3/conf</location>
-		</link>
-		<link>
-			<name>conf/secure</name>
-			<type>2</type>
-			<location>C:/play/modules/secure/conf</location>
 		</link>
 	</linkedResources>
 </projectDescription>

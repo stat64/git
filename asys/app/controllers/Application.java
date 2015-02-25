@@ -16,10 +16,15 @@ import models.*;
 public class Application extends Controller {
 
 	public static void index() {
-		render();
+		List<HorarioV> horarios = null;
+		horarios = HorarioV.findAll();
+		List<Usuario> usuarios = null;
+		usuarios = Usuario.findAll();
+		//Actividad actividad=new Actividad();
+		//actividad.CrearDia(Long.valueOf(1), "Domingo");
+		render(horarios,usuarios);
 	}
-	
-	
+
 	public static void list(String search, Integer size, Integer page) {
 		List<Usuario> docen = null;
 		page = page != null ? page : 1;
@@ -34,16 +39,25 @@ public class Application extends Controller {
 		render(docen, search, size, page);
 		System.out.println("Si se llama a la funcion");
 	}
-	
-	public void Crearhorario(long Nro, String Hora, String Lunes, String Martes,
-			String Miercoles, String Jueves, String Viernes, String Sabado) {
-		UsuarioProfesor usuarioProfesor = new UsuarioProfesor();
-		usuarioProfesor.crearHorario(Nro, Hora, Lunes, Martes, Miercoles,
-				Jueves, Viernes, Sabado);
-		usuarioProfesor.save();
-	}
-	public static void ingresarItem(String cedula) {
-		String val= cedula;
+
+	public static void ingresarItem(String codigo) {
+		String val = codigo;
 		render(val);
 	}
+
+	public void inicializa() {
+		UsuarioProfesor usuario1 = new UsuarioProfesor();
+		usuario1.cedula = "0502594428";
+		usuario1.email = "alexcevallos08asd";
+		usuario1.esInactivo = false;
+		usuario1.email = "alexcevallos08asd";
+		// Calendar test=
+		// usuario1.fecIng=23122014;
+		usuario1.nombre = "santo";
+		usuario1.password = "cedsdf";
+		usuario1.userName = "aceva";
+		usuario1.save();
+	}
+
+
 }

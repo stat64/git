@@ -1,0 +1,25 @@
+hola mundo
+
+#{form id:'itemForm', action:@Application.ingresarAula(), method:'POST', enctype:'multipart/form-data' }			
+<table>
+	<tr>
+		<td>Elija el codigo de aula:</td>
+		#{field 'id'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese el numero de aula: </td>
+		#{field 'numero'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese el edificio:</td>
+		#{field 'edificio'}
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  		
+		<td>Ingrese el piso:</td>		
+		#{field 'piso'}															  			
+		<td><input id="${field.id}" name="${field.name}" size="5" type="text"></td>
+		#{/field}															  			
+		<td><input size="5" type="submit" value="Comprar"></td>		
+	</tr>
+</table>
+#{/form}

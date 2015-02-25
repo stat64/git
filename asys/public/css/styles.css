@@ -602,9 +602,11 @@ font-family: Helvetica,Arial;
 }
  
 table td {
-padding:6px;
-font-size: 9px;
-width: 9px;
+padding-bottom:7px;
+padding-top:7px;
+font-size:11px;
+text-align:center;
+width: 8px;
 }
  
 table tr:first-child td:first-child {
